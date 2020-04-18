@@ -3,15 +3,32 @@
 
 ---
 
+## render()
+- The only required method in a class component.
+- It should examine this.props and this.state and return one of the following types:
+  - **React elements** - Typically created via JSX.
+  - **Arrays and fragments** - Lets you return multiple elements from render.
+  - **Portals** - Lets you render children into a different DOM subtree.
+  - **String and numbers** - These are rendered as text nodes in the DOM.
+  - **Booleans or null** - Render nothing.
+- It does not modify component state.
+- It returns the same result each time it’s invoked.
+- It does not directly interact with the browser.
+  - If you need to interact with the browser do it in componentDidMount() or the other lifecycle methods.
+- It will not be invoked if shouldComponentUpdate() returns false.
+```
+render()
+```
+
 ## constructor() 
-  - Called before it is mounted.
-  - React constructors are typically only used for two purposes:
-    - Initializing local state by assigning an object to this.state.
-    - Binding event handler methods to an instance.
-  - **Do not call setState()** in the constructor(). Instead, **assign the initial state to this.state** directly.
-  - -Avoid introducing any side-effects or subscriptions in the constructor. 
-    - Use componentDidMount() instead.
-    - **Avoid copying props into state!**
+- Called before it is mounted.
+- React constructors are typically only used for two purposes:
+  - Initializing local state by assigning an object to this.state.
+  - Binding event handler methods to an instance.
+- **Do not call setState()** in the constructor(). Instead, **assign the initial state to this.state** directly.
+- -Avoid introducing any side-effects or subscriptions in the constructor. 
+  - Use componentDidMount() instead.
+  - **Avoid copying props into state!**
 ```
 constructor(props) {
   super(props);
