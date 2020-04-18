@@ -3,7 +3,7 @@
 
 ---
 
-## Do Not Modify State Directly.
+## Do Not Modify State Directly
 - Use **setState()**
 - The only place where you can assign this.state is the constructor.
 
@@ -15,7 +15,7 @@ this.state.comment = 'Hello';
 this.setState({comment: 'Hello'});
 ```
 
-## State Updates May Be Asynchronous.
+## State Updates May Be Asynchronous
 
 - React may batch multiple setState() calls into a single update for performance.
 ```
@@ -37,7 +37,7 @@ this.setState(function(state, props) {
 });
 ```
 
-## State Updates are Merged.
+## State Updates are Merged
 - When you call setState(), React merges the object you provide into the current state.
 - Example in the constructor:
 ```
@@ -67,7 +67,7 @@ componentDidMount() {
 }
 ```
 
-## The Data Flows Down.
+## The Data Flows Down
 - State is not accessible to any component other than the one that owns and sets it.
   - It is **local** or **encapsulated**.
 - Passing its state down as props to its child component:
