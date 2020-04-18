@@ -26,7 +26,7 @@ render()
   - Initializing local state by assigning an object to this.state.
   - Binding event handler methods to an instance.
 - **Do not call setState()** in the constructor(). Instead, **assign the initial state to this.state** directly.
-- -Avoid introducing any side-effects or subscriptions in the constructor. 
+- Avoid introducing any side-effects or subscriptions in the constructor. 
   - Use componentDidMount() instead.
   - **Avoid copying props into state!**
 ```
