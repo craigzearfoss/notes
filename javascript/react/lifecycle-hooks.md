@@ -109,7 +109,8 @@ shouldComponentUpdate(nextProps, nextState) {
 
 ## getDerivedStateFromProps()
 
-- Static method that is used when the component receives props its parent and needs to set its own state base on those props.
+- Used when the component receives props its parent and needs to set its own state base on those props.
+- Static method.
 - Returns the new, updated state based upon the props.
 - A lot of times this has been misused and caused weird bugs and performance issues.
   - There's actually a better way to do what they are trying to do.
