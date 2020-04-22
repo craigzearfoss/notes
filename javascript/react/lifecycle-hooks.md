@@ -16,8 +16,15 @@
 - It does not directly interact with the browser.
   - If you need to interact with the browser do it in componentDidMount() or the other lifecycle methods.
 - It will not be invoked if shouldComponentUpdate() returns false.
+- The render method can get called many times. For instance, when anything gets changed.
 ```
-render()
+render() {
+  return (
+    <div>
+      Code goes here
+    </div>
+  );
+}
 ```
 
 ## constructor() 
