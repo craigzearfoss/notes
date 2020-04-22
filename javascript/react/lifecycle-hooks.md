@@ -123,3 +123,14 @@ static getDerivedStateFromProps(props, state) {
   // return the new, updated state based upon the props
 }
 ```
+
+### getSnapshotBeforeUpdate()
+
+- Allows you to create a backup of the way things are.
+- The "snapshot" will most likely be an object with mutliple point of tdata inside of it.
+- Not a really common lifecycle method.
+
+```
+getSnapshotBeforeUpdate() {
+}
+```
