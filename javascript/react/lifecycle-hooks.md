@@ -106,3 +106,19 @@ shouldComponentUpdate(nextProps, nextState) {
   // Return false if not (Will make the application more performant.)
 }
 ```
+
+## getDerivedStateFromProps()
+
+- Static method that is used when the component receives props its parent and needs to set its own state base on those props.
+- Returns the new, updated state based upon the props.
+- A lot of times this has been misused and caused weird bugs and performance issues.
+  - There's actually a better way to do what they are trying to do.
+  - [https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
+- Its use is discouraged.
+- [https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops)
+
+```
+static getDerivedStateFromProps(props, state) {
+  // return the new, updated state based upon the props
+}
+```
