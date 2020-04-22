@@ -124,7 +124,7 @@ static getDerivedStateFromProps(props, state) {
 }
 ```
 
-### getSnapshotBeforeUpdate()
+## getSnapshotBeforeUpdate()
 
 - Allows you to create a backup of the way things are.
 - The "snapshot" will most likely be an object with mutliple point of tdata inside of it.
