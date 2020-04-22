@@ -55,6 +55,7 @@ constructor(props) {
   - It triggers an extra rendering, but it will happen before the browser updates the screen. 
   - Use this pattern with caution because it often causes performance issues.
   - In most cases, you should be able to assign the initial state in the constructor().
+- The most common use is when you need an api call to get data from an external source.
 ```
 componentDidMount() {
 }
@@ -91,5 +92,17 @@ componentDidUpdate(prevProps) {
 - Once a component instance is unmounted, it will never be mounted again.
 ```
 componentWillUnmount() {
+}
+```
+
+---
+
+## shouldComponentUpdate()
+- If React ever has question about whether a component should be re-rendered, it will re-render it just in case.
+  - This can become slow in a large app.
+```
+shouldComponentUpdate(nextProps, nextState) {
+  // Return true if you want it to update.
+  // Return false if not (Will make the application more performant.)
 }
 ```
