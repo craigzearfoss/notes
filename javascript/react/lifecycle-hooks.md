@@ -98,7 +98,7 @@ componentWillUnmount() {
 ---
 
 ## shouldComponentUpdate()
-- If React ever has question about whether a component should be re-rendered, it will re-render it just in case.
+- If React ever has a question about whether a component should be re-rendered, it will re-render it just in case.
   - This can become slow in a large app.
 ```
 shouldComponentUpdate(nextProps, nextState) {
