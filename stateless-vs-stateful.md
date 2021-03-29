@@ -5,7 +5,7 @@
 - The token is stored on back end in a database or cache.
 - Scales well but may make extra calls to the database.
 - Usually caching is done to reduce database calls.
-- The application has no state os iIf a server goes down you just can redirect to another server.
+- The application has no state so if a server goes down you just can redirect to another server.
 - You can easily add new servers
 
 ### Stateful
